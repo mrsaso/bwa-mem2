@@ -30,9 +30,11 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <assert.h>
+/* TODO 1: EDIT HERE */
 #include <emmintrin.h>
 #include "ksw.h"
 #include "macro.h"
+/* TODO 2: EDIT HERE */
 
 extern uint64_t tprof[LIM_R][LIM_C];
 

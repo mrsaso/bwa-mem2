@@ -51,7 +51,7 @@ extern uint64_t tprof[LIM_R][LIM_C];
 void __cpuid(unsigned int i, unsigned int cpuid[4]) {
 #ifdef _WIN32
     __cpuid((int *) cpuid, (int)i);
-
+/* TODO: EDIT HERE */
 #else
     asm volatile
         ("cpuid" : "=a" (cpuid[0]), "=b" (cpuid[1]), "=c" (cpuid[2]), "=d" (cpuid[3])

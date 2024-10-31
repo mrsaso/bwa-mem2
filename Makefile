@@ -51,6 +51,7 @@ OBJS=		src/fastmap.o src/bwtindex.o src/utils.o src/memcpy_bwamem.o src/kthread.
 BWA_LIB=    libbwa.a
 SAFE_STR_LIB=    ext/safestringlib/libsafestring.a
 
+# TODO: EDIT HERE
 ifeq ($(arch),sse41)
 	ifeq ($(CXX), icpc)
 		ARCH_FLAGS=-msse4.1

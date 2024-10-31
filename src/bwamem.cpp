@@ -2028,6 +2028,7 @@ inline void sortPairsLen(SeqPair *pairArray, int32_t count, SeqPair *tempArray, 
     int32_t i;
 #if ((!__AVX512BW__) & (__AVX2__ | __SSE2__))
     for(i = 0; i <= MAX_SEQ_LEN16; i++) hist[i] = 0;
+/* TODO: EDIT HERE */
 #else
     __m512i zero512 = _mm512_setzero_si512();
     for(i = 0; i <= MAX_SEQ_LEN16; i+=16)
