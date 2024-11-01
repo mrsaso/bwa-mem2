@@ -48,19 +48,7 @@
 
 #define xassert(cond, msg) if ((cond) == 0) _err_fatal_simple_core(__func__, msg)
 
-/* EDIT IS HERE */
-#ifdef __aarch64__
-#define _mm_malloc(size, align) aligned_alloc(align, size)
-#define _mm_free(p) free(p)
-#include <chrono> 
-static inline unsigned long long __rdtsc(void)
-{
-	auto duration = std::chrono::system_clock::now().time_since_epoch();
-	auto millis = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
-	return millis;
-}
-#endif
-/* EDIT IS HERE */
+/* TODO: EDIT HERE */
 
 #if defined(__GNUC__) && __GNUC__ < 11 && !defined(__clang__)
 #if defined(__i386__)
